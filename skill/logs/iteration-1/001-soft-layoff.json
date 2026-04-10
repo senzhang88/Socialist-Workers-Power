@@ -1,0 +1,28 @@
+{
+  "query": "公司让我停岗待业，工资降到基本工资，门禁权限也关了，我该怎么办？",
+  "eval_name": "soft_layoff_response",
+  "dimension_scores": {
+    "actionability": 5,
+    "accuracy": 5,
+    "completeness": 4,
+    "stance": 5,
+    "tool_usage": 3
+  },
+  "total_score": 22,
+  "max_score": 25,
+  "passed": true,
+  "issues": [
+    "未主动建议调用calculator.py工具进行精确计算",
+    "未提及劳动监察投诉渠道作为备选"
+  ],
+  "strengths": [
+    "开头明确给出'今天立即做'的行动清单",
+    "正确引用《要求恢复劳动条件通知书》",
+    "准确引用上海社平工资12,434元数据",
+    "明确提示2N赔偿而非N+1"
+  ],
+  "response_length": 480,
+  "tool_calls": [],
+  "files_referenced": ["docs/crisis.md", "references/shanghai.md"],
+  "grader_notes": "整体表现优秀，可执行性强。建议增强工具调用意识和备选方案提示。"
+}

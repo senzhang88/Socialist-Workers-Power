@@ -14,9 +14,31 @@
 
 ## 🚀 快速开始
 
-### 方式1：作为Claude Skill使用
+### 方式1：作为Claude Skill使用（推荐）
 
-将本仓库克隆到 `~/.claude/skills/` 目录，在对话中触发劳动维权相关关键词即可。
+**一键安装：**
+```bash
+# 下载并安装技能
+claude skills install https://github.com/senzhang88/Socialist-Workers-Power/releases/latest/download/labor-rights-shanghai-v1.0.skill
+```
+
+**或手动安装：**
+```bash
+# 1. 下载 .skill 文件
+wget https://github.com/senzhang88/Socialist-Workers-Power/releases/latest/download/labor-rights-shanghai-v1.0.skill
+
+# 2. 安装到 Claude
+claude skills install labor-rights-shanghai-v1.0.skill
+
+# 或解压到技能目录
+unzip labor-rights-shanghai-v1.0.skill -d ~/.claude/skills/labor-rights-shanghai/
+```
+
+**使用方法：**
+安装后，在 Claude 对话中提及劳动维权相关问题即可自动触发：
+- "公司让我停岗待业怎么办"
+- "帮我算一下赔偿金额"
+- "怎么申请劳动仲裁"
 
 ### 方式2：直接使用文档
 
@@ -31,11 +53,23 @@
 ```
 Socialist-Workers-Power/
 ├── README.md                           # 项目总览（本文件）
-├── SKILL.md                            # Claude技能主文件
 ├── LICENSE                             # MIT开源协议
 ├── CHANGELOG.md                        # 版本更新记录
 │
-├── docs/                               # 按维权阶段组织的文档
+├── skill/                              # 🎯 Claude技能包（Anthropic官方标准）
+│   ├── SKILL.md                        # 技能主文件
+│   ├── CLAUDE.md                       # Claude代理使用说明
+│   ├── docs/                           # 阶段指南
+│   ├── references/                     # 参考资料
+│   ├── scripts/                        # 可执行脚本
+│   ├── agents/                         # 评估代理
+│   ├── evals/                          # 测试用例
+│   └── eval-viewer/                    # 可视化查看器
+│
+├── releases/                           # 📦 技能发布包
+│   └── labor-rights-shanghai-v1.0.skill # 一键安装包
+│
+├── docs/                               # 📚 按维权阶段组织的完整文档
 │   ├── phase-0-prepare/                # 🛡️ 预防阶段
 │   │   ├── handbook-self-check.md       # 员工手册自查清单
 │   │   └── job-offer-checklist.md     # ⭐ 入职避雷指南
