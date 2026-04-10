@@ -4,6 +4,8 @@
 > 
 > **核心理念：** 企业有法务团队，而员工只有自己——这个项目的目标就是补上这个信息差。
 
+[![GitHub stars](https://img.shields.io/github/stars/senzhang88/Socialist-Workers-Power?style=social)](https://github.com/senzhang88/Socialist-Workers-Power/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/senzhang88/Socialist-Workers-Power?style=social)](https://github.com/senzhang88/Socialist-Workers-Power/network)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 [![Location: Shanghai](https://img.shields.io/badge/Location-Shanghai-blue.svg)]()
@@ -172,6 +174,35 @@ $ python tools/compensation-calculator.py
 
 ### 如果你是HR/法务
 - 本项目也可以帮你了解劳动者视角，优化合规流程
+
+---
+
+## 🌐 在线协作（Beta）
+
+除了GitHub，我们还提供以下协作平台，方便不同需求的贡献者参与：
+
+### 飞书文档（推荐国内用户）
+- **链接**：（待创建）
+- **用途**：实时协作编辑、收集案例、讨论策略
+- **优势**：国内访问快、支持Markdown、评论功能完善
+- **权限**：开放评论，编辑权限需申请
+
+### Google Docs（推荐海外用户）
+- **链接**：（待创建）
+- **用途**：翻译协作、国际案例收集
+- **优势**：全球访问、版本历史完善
+- **权限**：开放评论，编辑权限需申请
+
+### 协作原则
+1. **GitHub为主**：所有正式文档以GitHub版本为准
+2. **在线协作为辅**：用于讨论、草稿、收集反馈
+3. **定期同步**：定期将在线文档的改进同步到GitHub
+4. **版权归属**：所有贡献内容默认采用MIT协议开源
+
+### 想要参与协作？
+- 发现错误？→ 直接提交 [GitHub Issue](https://github.com/senzhang88/Socialist-Workers-Power/issues)
+- 有改进建议？→ 在飞书/Google文档评论，或提交PR
+- 想贡献案例？→ 联系维护者脱敏后纳入
 
 ---
 
