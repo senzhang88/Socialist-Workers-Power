@@ -1,0 +1,9 @@
+[project]
+name = "wenjian"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "paddleocr>=3.4.0",
+    "paddlepaddle>=3.3.1",
+]
