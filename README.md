@@ -9,16 +9,33 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 [![Location: Shanghai](https://img.shields.io/badge/Location-Shanghai-blue.svg)]()
+[![Claude Skill](https://img.shields.io/badge/Claude-Skill-purple.svg)](https://github.com/senzhang88/Socialist-Workers-Power/releases)
+
+---
+
+## ⚡ 最快使用方式：Claude Skill（一键安装）
+
+**一句话安装：**
+```bash
+claude skills install https://github.com/senzhang88/Socialist-Workers-Power/releases/latest/download/labor-rights-shanghai-v1.0.skill
+```
+
+**然后直接问 Claude：**
+- "公司让我停岗待业怎么办"
+- "帮我算一下赔偿金额"  
+- "怎么申请劳动仲裁"
+- "被口头辞退了怎么取证"
+
+**✅ 无需配置，无需学习，对话即服务**
 
 ---
 
 ## 🚀 快速开始
 
-### 方式1：作为Claude Skill使用（推荐）
+### 方式1：作为Claude Skill使用（强烈推荐 - 最简单）
 
 **一键安装：**
 ```bash
-# 下载并安装技能
 claude skills install https://github.com/senzhang88/Socialist-Workers-Power/releases/latest/download/labor-rights-shanghai-v1.0.skill
 ```
 
