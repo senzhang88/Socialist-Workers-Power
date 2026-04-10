@@ -10,7 +10,9 @@
 - 计算未休年假补偿
 - 自动处理上海三倍封顶（37,302元）
 
-使用：python calculator.py
+使用方式：
+  交互式：python calculator.py
+  命令行：python calculator.py --start 2020-03-15 --end 2025-03-15 --salary 25000 --illegal
 """
 
 from datetime import datetime, date
@@ -63,8 +65,8 @@ def calculate_work_years(start_date, end_date):
     months = delta.months
     days = delta.days
 
-    # 超过6个月按1年算，不满6个月按0.5年算
-    if months > 6 or (months == 6 and days > 0):
+    # 六个月以上按1年算，不满六个月按0.5年算（《劳动合同法》第47条）
+    if months >= 6:
         years += 1
     elif months > 0 or days > 0:
         years += 0.5
@@ -92,7 +94,7 @@ def format_money(amount):
 def main():
     print("=" * 70)
     print(" " * 15 + "上海劳动仲裁赔偿计算器 v1.0")
-    print(" " * 20 + "Socialist-Workers-Power")
+    print(" " * 20 + "WorkPowers / 劳动者力量")
     print("=" * 70)
     print()
     print("【上海2024-2025年度标准】")
@@ -232,9 +234,93 @@ def main():
     print("祝维权顺利！💪")
 
 
+def calculate_compensation(start_date_str, end_date_str, monthly_salary, illegal_termination=True):
+    """
+    非交互式计算接口，供 Claude 直接调用。
+
+    参数：
+        start_date_str: 入职日期 "YYYY-MM-DD"
+        end_date_str: 离职日期 "YYYY-MM-DD"
+        monthly_salary: 月薪（元）
+        illegal_termination: 是否违法解除（True=2N，False=N）
+
+    返回：
+        dict 包含所有计算结果
+    """
+    start_date = datetime.strptime(start_date_str, "%Y-%m-%d").date()
+    end_date = datetime.strptime(end_date_str, "%Y-%m-%d").date()
+
+    work_years = calculate_work_years(start_date, end_date)
+    is_high_income = monthly_salary > SHANGHAI_TRIPLE_CAP
+
+    n_amount, effective_salary, effective_years = calculate_n(monthly_salary, work_years)
+    n_double = n_amount * 2
+
+    result = {
+        "work_years": work_years,
+        "is_high_income": is_high_income,
+        "monthly_salary": monthly_salary,
+        "effective_salary": effective_salary,
+        "effective_years": effective_years,
+        "n": n_amount,
+        "n_plus_1": n_amount + effective_salary,
+        "two_n": n_double,
+        "shanghai_avg_salary": SHANGHAI_AVG_SALARY,
+        "shanghai_triple_cap": SHANGHAI_TRIPLE_CAP,
+    }
+
+    if illegal_termination:
+        result["recommended"] = n_double
+        result["recommended_label"] = "违法解除赔偿金（2N）"
+    else:
+        result["recommended"] = n_amount
+        result["recommended_label"] = "经济补偿金（N）"
+
+    return result
+
+
+def cli_mode():
+    """命令行模式：python calculator.py --start 2020-03-15 --end 2025-03-15 --salary 25000 --illegal"""
+    import argparse
+    parser = argparse.ArgumentParser(description="上海劳动仲裁赔偿计算器")
+    parser.add_argument("--start", help="入职日期 YYYY-MM-DD")
+    parser.add_argument("--end", help="离职日期 YYYY-MM-DD")
+    parser.add_argument("--salary", type=float, help="月薪（元）")
+    parser.add_argument("--illegal", action="store_true", default=True, help="违法解除（默认2N）")
+    parser.add_argument("--legal", action="store_true", help="合法解除（N）")
+    args = parser.parse_args()
+
+    if not all([args.start, args.end, args.salary]):
+        parser.print_help()
+        print("\n示例：python calculator.py --start 2020-03-15 --end 2025-03-15 --salary 25000 --illegal")
+        return
+
+    illegal = not args.legal
+    result = calculate_compensation(args.start, args.end, args.salary, illegal)
+
+    print("=" * 50)
+    print("上海劳动仲裁赔偿计算结果")
+    print("=" * 50)
+    print(f"入职日期：{args.start}")
+    print(f"离职日期：{args.end}")
+    print(f"工作年限：{result['work_years']:.1f} 年")
+    print(f"月薪：{result['monthly_salary']:,.0f} 元")
+    if result['is_high_income']:
+        print(f"⚠️ 月薪超过三倍封顶（{result['shanghai_triple_cap']:,}元），按封顶计算")
+        print(f"  有效年限：{result['effective_years']:.1f} 年（最高12年）")
+    print(f"经济补偿金（N）：{result['n']:,.2f} 元")
+    print(f"N+1：{result['n_plus_1']:,.2f} 元")
+    print(f"违法解除赔偿金（2N）：{result['two_n']:,.2f} 元")
+    print(f"推荐主张：{result['recommended_label']} = {result['recommended']:,.2f} 元")
+    print("=" * 50)
+
+
 if __name__ == "__main__":
     try:
-        main()
+        if len(sys.argv) > 1:
+            cli_mode()
+        else:
+            main()
     except KeyboardInterrupt:
         print("\n\n已退出计算器。")
         sys.exit(0)
