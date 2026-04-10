@@ -1,15 +1,17 @@
-# Socialist-Workers-Power / 劳动者力量
+# WorkPowers / 劳动者力量
 
 > 一个专为上海地区劳动者设计的维权知识库与工具集。
 > 
+> **品牌统一：** WorkPowers = 劳动者力量
+> 
 > **核心理念：** 企业有法务团队，而员工只有自己——这个项目的目标就是补上这个信息差。
 
-[![GitHub stars](https://img.shields.io/github/stars/senzhang88/Socialist-Workers-Power?style=social)](https://github.com/senzhang88/Socialist-Workers-Power/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/senzhang88/Socialist-Workers-Power?style=social)](https://github.com/senzhang88/Socialist-Workers-Power/network)
+[![GitHub stars](https://img.shields.io/github/stars/senzhang88/WorkPowers?style=social)](https://github.com/senzhang88/WorkPowers/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/senzhang88/WorkPowers?style=social)](https://github.com/senzhang88/WorkPowers/network)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 [![Location: Shanghai](https://img.shields.io/badge/Location-Shanghai-blue.svg)]()
-[![Claude Skill](https://img.shields.io/badge/Claude-Skill-purple.svg)](https://github.com/senzhang88/Socialist-Workers-Power/releases)
+[![Claude Skill](https://img.shields.io/badge/Claude-Skill-purple.svg)](https://github.com/senzhang88/WorkPowers/releases)
 
 ---
 
@@ -17,7 +19,7 @@
 
 **一句话安装：**
 ```bash
-claude skills install https://github.com/senzhang88/Socialist-Workers-Power/releases/latest/download/labor-rights-shanghai-v1.0.skill
+claude skills install https://github.com/senzhang88/WorkPowers/releases/latest/download/work-powers-shanghai-v1.0.skill
 ```
 
 **然后直接问 Claude：**
@@ -36,19 +38,19 @@ claude skills install https://github.com/senzhang88/Socialist-Workers-Power/rele
 
 **一键安装：**
 ```bash
-claude skills install https://github.com/senzhang88/Socialist-Workers-Power/releases/latest/download/labor-rights-shanghai-v1.0.skill
+claude skills install https://github.com/senzhang88/WorkPowers/releases/latest/download/work-powers-shanghai-v1.0.skill
 ```
 
 **或手动安装：**
 ```bash
 # 1. 下载 .skill 文件
-wget https://github.com/senzhang88/Socialist-Workers-Power/releases/latest/download/labor-rights-shanghai-v1.0.skill
+wget https://github.com/senzhang88/WorkPowers/releases/latest/download/work-powers-shanghai-v1.0.skill
 
 # 2. 安装到 Claude
-claude skills install labor-rights-shanghai-v1.0.skill
+claude skills install work-powers-shanghai-v1.0.skill
 
 # 或解压到技能目录
-unzip labor-rights-shanghai-v1.0.skill -d ~/.claude/skills/labor-rights-shanghai/
+unzip work-powers-shanghai-v1.0.skill -d ~/.claude/skills/work-powers-shanghai/
 ```
 
 **使用方法：**
@@ -84,7 +86,7 @@ Socialist-Workers-Power/
 │   └── eval-viewer/                    # 可视化查看器
 │
 ├── releases/                           # 📦 技能发布包
-│   └── labor-rights-shanghai-v1.0.skill # 一键安装包
+│   └── work-powers-shanghai-v1.0.skill # 一键安装包
 │
 ├── docs/                               # 📚 按维权阶段组织的完整文档
 │   ├── phase-0-prepare/                # 🛡️ 预防阶段
@@ -251,7 +253,7 @@ $ python tools/compensation-calculator.py
 4. **版权归属**：所有贡献内容默认采用MIT协议开源
 
 ### 想要参与协作？
-- 发现错误？→ 直接提交 [GitHub Issue](https://github.com/senzhang88/Socialist-Workers-Power/issues)
+- 发现错误？→ 直接提交 [GitHub Issue](https://github.com/senzhang88/WorkPowers/issues)
 - 有改进建议？→ 在飞书/Google文档评论，或提交PR
 - 想贡献案例？→ 联系维护者脱敏后纳入
 

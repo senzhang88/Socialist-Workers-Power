@@ -2,7 +2,9 @@
 
 ## 迭代目标
 
-根据Anthropic官方skill-creator最佳实践，将labor-rights-shanghai技能优化至生产就绪状态。
+根据Anthropic官方skill-creator最佳实践，将 work-powers-shanghai（劳动者力量）技能优化至生产就绪状态。
+
+**品牌统一：** WorkPowers = 劳动者力量
 
 ## 迭代1：基础架构完善
 
@@ -81,7 +83,7 @@ python scripts/aggregate_benchmark.py logs/iteration-1/*.json
 # 将评估结果保存到 logs/iteration-N/XXX.json
 
 # 2. 聚合评估结果
-cd ~/.claude/skills/labor-rights-shanghai
+cd ~/.claude/skills/work-powers-shanghai
 python scripts/aggregate_benchmark.py 'logs/iteration-1/*.json'
 
 # 3. 生成可视化报告

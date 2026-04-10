@@ -1,6 +1,8 @@
-# 上海劳动维权助手 (labor-rights-shanghai)
+# 劳动者力量 - 上海劳动维权助手 (work-powers-shanghai)
 
-为上海地区劳动者提供全流程维权指导的Claude Skill。
+为上海地区劳动者提供全流程维权指导的 Claude Skill。
+
+**品牌统一：WorkPowers / 劳动者力量**
 
 ## 触发场景
 

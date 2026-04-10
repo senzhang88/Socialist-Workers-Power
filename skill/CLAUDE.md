@@ -1,8 +1,10 @@
 # CLAUDE.md
 
-## 劳动维权技能 - Claude代理使用说明
+## 劳动者力量 - Claude代理使用说明
 
-本文件指导Claude如何正确使用 labor-rights-shanghai 技能。
+本文件指导Claude如何正确使用 work-powers-shanghai 技能。
+
+**品牌名：WorkPowers / 劳动者力量**
 
 ### 技能目的
 
