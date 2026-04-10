@@ -147,7 +147,7 @@ compatibility: universal
 - 工作年限：每满1年 = 1个月工资（6个月以上不满1年按1年）
 - 违法解除赔偿金（2N）= 月平均工资 × 工作年限 × 2
 - 高收入者（月薪>37,302元）：按37,302元封顶，年限最高12年
-- 精确计算可用 scripts/calculator.py
+- 精确计算可用 scripts/calculator.py（命令行：python scripts/calculator.py --start 入职日期 --end 离职日期 --salary 月薪 --illegal）
 ```
 
 ## 文件引用清单
