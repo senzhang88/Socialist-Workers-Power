@@ -92,4 +92,4 @@ python scripts/calculator.py
 
 *本技能遵循Anthropic官方skill-creator标准构建*
 *版本：1.0*
-*更新：2025-04-10*
+*更新：2025-03*

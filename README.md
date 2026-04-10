@@ -161,7 +161,7 @@ $ python tools/compensation-calculator.py
 
 === 上海劳动仲裁赔偿计算器 ===
 请输入入职日期（格式：YYYY-MM-DD）：2020-03-15
-请输入离职日期（格式：YYYY-MM-DD）：2025-04-10
+请输入离职日期（格式：YYYY-MM-DD）：2025-03-15
 请输入月薪（元）：8000
 是否违法解除？（y/n）：y
 

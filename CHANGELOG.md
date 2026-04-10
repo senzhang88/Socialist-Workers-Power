@@ -7,7 +7,7 @@
 
 ---
 
-## [1.0.0] - 2025-04-10
+## [1.0.0] - 2025-03-15
 
 ### 🎉 正式发布
 
@@ -65,7 +65,7 @@
 
 ---
 
-## [0.9.0] - 2025-04-09
+## [0.9.0] - 2025-03-14
 
 ### 初始版本
 
@@ -77,9 +77,8 @@
 
 ### 核心文件
 
-- `SKILL.md` - Claude技能主文件
-- `references/laws-compilation.md` - 法律汇编
-- `references/shanghai-regulations.md` - 上海规定
+- `references/laws/laws-compilation.md` - 法律汇编
+- `references/shanghai/shanghai-regulations.md` - 上海规定
 - `docs/phase-1-crisis/soft-layoff-guide.md` - 软裁员指南
 
 ---
@@ -131,4 +130,4 @@ git diff v0.9.0 v1.0.0
 
 ---
 
-*最后更新：2025年4月10日*
+*最后更新：2025年3月*
