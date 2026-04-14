@@ -1,0 +1,430 @@
+/* ============================================
+   WorkPowers Design System v2
+   Apple-inspired aesthetic from Stitch designs
+   Primary: #0071e3 / #007AFF
+   BG: #f5f5f7 | Text: #1d1d1f
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* ---- Design Tokens ---- */
+:root {
+  --wp-blue: #0071e3;
+  --wp-blue-ios: #007AFF;
+  --wp-blue-hover: #0077ed;
+  --wp-bg: #f5f5f7;
+  --wp-bg-white: #ffffff;
+  --wp-text: #1d1d1f;
+  --wp-text-secondary: rgba(29, 29, 31, 0.6);
+  --wp-border: rgba(0, 0, 0, 0.08);
+  --wp-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --wp-shadow-md: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --wp-shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.12);
+  --wp-radius: 12px;
+  --wp-radius-sm: 8px;
+  --wp-radius-lg: 18px;
+}
+
+/* ---- Base ---- */
+body, .md-typeset {
+  font-family: 'Inter', 'PingFang SC', 'Noto Sans SC', -apple-system, sans-serif;
+  color: var(--wp-text);
+  background: var(--wp-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: 'Manrope', 'PingFang SC', 'Noto Sans SC', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--wp-text);
+}
+
+/* ---- Header / Top Nav (Stitch glass-nav spec) ---- */
+.md-header {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  box-shadow: 0 12px 32px rgba(44, 51, 56, 0.06) !important;
+  border-bottom: none !important;
+}
+
+.md-header[data-md-state="shadow"] {
+  box-shadow: 0 12px 32px rgba(44, 51, 56, 0.1) !important;
+}
+
+.md-header__title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+}
+
+/* Target actual text node — Stitch spec: Manrope Black, blue-600 */
+.md-header__title .md-ellipsis,
+.md-header__title .md-header__topic .md-ellipsis {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: -0.03em !important;
+  color: var(--wp-blue) !important;
+}
+
+/* Logo image: show inline with text */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.4rem;
+  width: auto;
+}
+
+.md-header__button {
+  color: rgba(44, 51, 56, 0.5) !important;
+}
+
+.md-header__button:hover {
+  color: var(--wp-blue) !important;
+}
+
+/* ---- Nav Tabs (Stitch: Inter Medium, blue bottom-border active) ---- */
+.md-tabs {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-top: 1px solid rgba(44, 51, 56, 0.06) !important;
+  border-bottom: 1px solid rgba(44, 51, 56, 0.06) !important;
+  box-shadow: none !important;
+}
+
+.md-tabs__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(71, 85, 105, 0.85) !important; /* slate-600 */
+  opacity: 1 !important;
+  transition: color 0.15s, background 0.15s;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem !important;
+  margin: 0 2px;
+}
+
+.md-tabs__link:hover {
+  color: var(--wp-blue) !important;
+  background: rgba(71, 85, 105, 0.05) !important;
+}
+
+/* Active tab: blue + bottom border (Stitch spec: border-b-2 border-blue-600) */
+.md-tabs__link--active {
+  color: var(--wp-blue) !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid var(--wp-blue) !important;
+  border-radius: 0 !important;
+  padding-bottom: 0.2rem !important;
+}
+
+/* Hide the Material theme's indicator (replaced by border-bottom above) */
+.md-tabs__indicator {
+  display: none !important;
+}
+
+/* ---- Sidebar ---- */
+.md-sidebar {
+  background: var(--wp-bg) !important;
+}
+
+.md-sidebar__inner {
+  padding-top: 1rem;
+}
+
+.md-nav__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--wp-text-secondary) !important;
+}
+
+.md-nav__link {
+  font-size: 0.875rem;
+  color: var(--wp-text-secondary) !important;
+  border-radius: var(--wp-radius-sm);
+  transition: background 0.15s, color 0.15s;
+  padding: 0.28rem 0.7rem !important;
+  margin: 1px 4px;
+}
+
+.md-nav__link:hover {
+  background: rgba(0, 0, 0, 0.04) !important;
+  color: var(--wp-text) !important;
+}
+
+.md-nav__link--active {
+  background: rgba(0, 113, 227, 0.08) !important;
+  color: var(--wp-blue) !important;
+  font-weight: 600;
+}
+
+/* ---- Main Content ---- */
+.md-main {
+  background: var(--wp-bg) !important;
+}
+
+.md-content__inner {
+  background: var(--wp-bg-white);
+  border-radius: var(--wp-radius-lg);
+  padding: 2rem 2.5rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: var(--wp-shadow-sm);
+  border: 1px solid var(--wp-border);
+}
+
+.md-typeset {
+  line-height: 1.75;
+  color: var(--wp-text);
+}
+
+/* ---- Typography ---- */
+.md-typeset h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--wp-border);
+}
+
+.md-typeset h3 {
+  font-size: 1.1rem;
+}
+
+/* ---- Links ---- */
+.md-typeset a {
+  color: var(--wp-blue);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.md-typeset a:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* ---- Admonitions (警告框) ---- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--wp-radius) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-left: 3px solid !important;
+  overflow: hidden;
+  background: #fff !important;
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: transparent !important;
+}
+
+.md-typeset .note {
+  border-left-color: var(--wp-blue) !important;
+}
+.md-typeset .note > .admonition-title {
+  color: var(--wp-blue);
+}
+
+.md-typeset .warning {
+  border-left-color: #ff9f0a !important;
+}
+.md-typeset .warning > .admonition-title {
+  color: #b36200;
+}
+
+.md-typeset .tip, .md-typeset .success {
+  border-left-color: #30d158 !important;
+}
+.md-typeset .tip > .admonition-title {
+  color: #1a7a32;
+}
+
+.md-typeset .danger {
+  border-left-color: #ff3b30 !important;
+}
+
+/* ---- Tables ---- */
+.md-typeset table:not([class]) {
+  border-radius: var(--wp-radius);
+  overflow: hidden;
+  box-shadow: none;
+  border: 1px solid var(--wp-border) !important;
+  font-size: 0.875rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--wp-bg) !important;
+  color: var(--wp-text) !important;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--wp-border) !important;
+  border-right: none !important;
+}
+
+.md-typeset table:not([class]) td {
+  border-color: var(--wp-border) !important;
+  border-right: none !important;
+}
+
+.md-typeset table:not([class]) tr:hover td {
+  background: rgba(0, 113, 227, 0.03) !important;
+}
+
+/* ---- Code ---- */
+.md-typeset code {
+  background: var(--wp-bg) !important;
+  color: var(--wp-blue) !important;
+  border-radius: 5px;
+  font-size: 0.84em;
+  padding: 0.12em 0.45em;
+  border: 1px solid var(--wp-border);
+  font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.md-typeset pre {
+  border-radius: var(--wp-radius) !important;
+  overflow: hidden;
+}
+
+.md-typeset pre > code {
+  font-size: 0.85rem;
+  border: none !important;
+  background: #1d1d1f !important;
+  color: #f5f5f7 !important;
+  padding: 1.25rem !important;
+}
+
+/* ---- Search ---- */
+.md-search__form {
+  border-radius: 2rem !important;
+  background: var(--wp-bg) !important;
+  border: 1px solid var(--wp-border) !important;
+  transition: all 0.2s;
+}
+
+.md-search__form:focus-within {
+  background: #fff !important;
+  border-color: var(--wp-blue) !important;
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15) !important;
+}
+
+.md-search__input {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem !important;
+}
+
+/* ---- Breadcrumb ---- */
+.md-nav--primary .md-nav__title {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--wp-text) !important;
+  font-weight: 800;
+}
+
+/* ---- Footer ---- */
+.md-footer {
+  background: #1d1d1f !important;
+}
+
+.md-footer-meta {
+  background: rgba(255,255,255,0.05) !important;
+}
+
+.md-footer__link {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+.md-footer__link:hover {
+  color: #fff !important;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--wp-blue);
+}
+
+/* ---- Dark Mode ---- */
+[data-md-color-scheme="slate"] {
+  --wp-bg: #000000;
+  --wp-bg-white: #1c1c1e;
+  --wp-text: #f5f5f7;
+  --wp-text-secondary: rgba(245, 245, 247, 0.6);
+  --wp-border: rgba(255, 255, 255, 0.1);
+  --wp-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: rgba(18, 18, 20, 0.85) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background: rgba(18, 18, 20, 0.85) !important;
+  border-top-color: rgba(255,255,255,0.06) !important;
+  border-bottom-color: rgba(255,255,255,0.06) !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: rgba(255,255,255,0.55) !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
+  color: #4b8eff !important;
+  background: rgba(255,255,255,0.06) !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link--active {
+  color: #4b8eff !important;
+  border-bottom-color: #4b8eff !important;
+}
+
+[data-md-color-scheme="slate"] .md-content__inner {
+  background: var(--wp-bg-white);
+  border-color: var(--wp-border);
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background: rgba(255,255,255,0.08) !important;
+  color: #64d2ff !important;
+  border-color: rgba(255,255,255,0.12) !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: rgba(255,255,255,0.05) !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition {
+  background: #1c1c1e !important;
+}
+
+[data-md-color-scheme="slate"] .md-search__form {
+  background: rgba(255,255,255,0.08) !important;
+  border-color: rgba(255,255,255,0.1) !important;
+}

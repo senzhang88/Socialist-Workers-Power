@@ -1,0 +1,132 @@
+# 劳动者力量 / WorkPowers 站点配置
+site_name: 劳动者力量 - 上海浦东劳动仲裁与劳动争议维权指南
+site_description: 上海浦东新区专业劳动仲裁指南、浦东劳动纠纷处理、被辞退赔偿计算、软裁员应对策略。专注浦东劳动人事争议仲裁，免费提供法律咨询与仲裁申请全流程指导。
+site_author: WorkPowers Team
+site_url: https://z.dasszss.com
+
+# 导航结构（按维权阶段组织）
+nav:
+  - 首页: index.md
+  - 🛡️ 预防阶段:
+    - 入职避雷指南: phase-0-prepare/job-offer-checklist.md
+    - 员工手册自查: phase-0-prepare/handbook-self-check.md
+  - ⚠️ 危机识别:
+    - 软裁员应对: phase-1-crisis/soft-layoff-guide.md
+    - 互联网公司风险: phase-1-crisis/tech-company-risks.md
+  - 📸 证据收集:
+    - 浦东劳动仲裁证据收集清单: phase-2-evidence/evidence-checklist.md
+    - 录音取证指南: phase-2-evidence/recording-guide.md
+  - ⚔️ 行动阶段:
+    - 浦东劳动仲裁委信息（地址电话）: phase-3-action/pudong-arbitration-committee.md
+    - 浦东劳动仲裁全流程指南: phase-3-action/arbitration-guide.md
+    - 劳动仲裁文书模板: phase-3-action/templates.md
+  - ⚖️ 开庭阶段:
+    - 浦东劳动仲裁开庭指南: phase-4-court/hearing-guide.md
+  - 📚 参考资料:
+    - 法律法规: references/laws/laws-compilation.md
+    - 上海规定: references/shanghai/shanghai-regulations.md
+    - 赔偿计算: references/compensation/compensation-calc.md
+    - 官方渠道: resources/official-resources.md
+  - 🔦 灯塔计划: lighthouse.md
+  - ⚖️ 案例库:
+    - 案例库首页: references/cases/README.md
+    - 胜诉50案例速查表: references/cases/速查表-胜诉50.md
+    - 败诉50案例速查表: references/cases/速查表-败诉50.md
+    - 高价值案例精选: references/cases/高价值案例精选.md
+    - 按类型:
+      - 软裁员·不提供劳动条件: references/cases/by-type/软裁员-不提供劳动条件.md
+      - 违法解除: references/cases/by-type/违法解除.md
+      - 年终奖争议: references/cases/by-type/年终奖.md
+      - 医疗期保护: references/cases/by-type/医疗期.md
+      - 加班费: references/cases/by-type/加班费.md
+
+# 主题配置
+theme:
+  name: material
+  language: zh
+  custom_dir: overrides
+  logo: assets/logo.jpg
+  favicon: assets/logo.jpg
+  palette:
+    # 浅色模式（默认 - 与 Stitch 设计对齐）
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: 切换到深色模式
+    # 深色模式
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+# 插件
+plugins:
+  - search:
+      lang: zh
+      separator: '[\s\u200b\-]'
+  # SEO优化：meta描述（暂时禁用，兼容性问题）
+  # - meta-descriptions:
+  # SEO优化：社交分享卡片（需要 cairosvg/pillow，暂时禁用）
+  # - social:
+  #     cards: true
+  # HTML压缩
+  - minify:
+      minify_html: true
+
+# 自定义 CSS
+extra_css:
+  - stylesheets/extra.css
+
+# 额外JavaScript（百度统计等）
+extra_javascript:
+  - javascripts/baidu-analytics.js
+
+# 额外功能
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/senzhang88/Socialist-Workers-Power
+    - icon: fontawesome/regular/envelope
+      link: mailto:zhsheshhh@gmail.com
+      name: 联系我们
+  generator: false
+  
+  # 百度验证代码占位符（需要在百度站长平台获取）
+  # 百度站长平台: https://ziyuan.baidu.com
+  baidu_verification: "YOUR_BAIDU_VERIFICATION_CODE"
+  baidu_hm: "YOUR_BAIDU_HM_CODE"
+
+# Markdown 扩展
+markdown_extensions:
+  - meta
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# 版权声明
+copyright: "© 2026 WorkPowers / 劳动者力量 | MIT License | 联系：zhsheshhh@gmail.com"

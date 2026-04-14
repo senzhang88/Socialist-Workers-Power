@@ -14,3 +14,25 @@ Thumbs.db
 
 # Personal private files (not for public repo)
 private/
+
+# SSH Keys and Certificates
+*.key
+*.pem
+*.crt
+*.pub
+id_rsa*
+id_ed25519*
+oracle_oci*
+
+# Config files with sensitive data
+config.yaml
+config.yml
+secrets*
+.env*
+
+# Baidu verification (should only be on server, not in repo)
+baidu_verify_*.html
+
+# Build outputs
+site/
+.gstack/

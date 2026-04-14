@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  
+  <!-- 百度站点验证 - 已通过百度站长平台验证 -->
+  <meta name="baidu-site-verification" content="codeva-RwiHiV0mT7" />
+  
+  <!-- Open Graph 优化 -->
+  {% if page %}
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ page.meta.title | default(page.title) | default(config.site_name) }}" />
+  <meta property="og:description" content="{{ page.meta.description | default(config.site_description) }}" />
+  <meta property="og:site_name" content="{{ config.site_name }}" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page.meta.title | default(page.title) | default(config.site_name) }}" />
+  <meta name="twitter:description" content="{{ page.meta.description | default(config.site_description) }}" />
+  {% endif %}
+
+  <!-- 百度移动适配 -->
+  <meta name="applicable-device" content="pc,mobile">
+
+  <!-- 结构化数据 - FAQ页面 -->
+  {% if page and page.meta.schema == "faq" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "上海劳动仲裁需要多长时间？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "劳动仲裁一般45天内结案，案情复杂可延长15天。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "被公司违法辞退可以申请多少赔偿？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "违法解除劳动合同可主张2N赔偿金，即两倍经济补偿金。"
+        }
+      }
+    ]
+  }
+  </script>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {{ super() }}
+  
+  <!-- 百度自动推送代码 - 页面访问时自动提交到百度 -->
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+{% endblock %}

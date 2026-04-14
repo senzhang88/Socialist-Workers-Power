@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# 禁止抓取搜索页面（如果有）
+Disallow: /search/
+
+# Sitemap 位置（MkDocs 自动生成）
+Sitemap: https://z.dasszss.com/sitemap.xml
+
+# 爬虫访问频率建议（可选）
+Crawl-delay: 1
+
+# 百度爬虫特定规则
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# 搜狗爬虫
+User-agent: Sogou web spider
+Allow: /
+
+# 360爬虫
+User-agent: 360Spider
+Allow: /
