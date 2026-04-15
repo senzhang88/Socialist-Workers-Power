@@ -150,6 +150,51 @@ compatibility: universal
 - 精确计算可用 scripts/calculator.py（命令行：python scripts/calculator.py --start 入职日期 --end 离职日期 --salary 月薪 --illegal）
 ```
 
+### 场景4：停岗待业（某互联网公司专项）
+
+**用户说：** "公司让我停岗待业" / "我是某社交平台公司员工，被停岗了"
+
+**你的响应：**
+```
+这是违法解除劳动合同的常见套路。公司已触发停岗待业专项应对流程：
+
+1. 【今天立即做 - 黄金72小时】
+   - 去公司打卡，门禁失效时录像/报警（拨打110要出警回执）
+   - 发送《要求恢复劳动条件通知书》（模板见公司专属指南）
+   - 飞书/钉钉被禁言时录屏保存证据
+   - 所有与HR/主管的沟通全程录音
+
+2. 【今天必做 - 书面留痕】
+   通过以下渠道发送书面通知：
+   - 企业邮箱（抄送个人邮箱备份）
+   - 钉钉/飞书（截图保存送达记录）
+   - 微信工作群（截图保存）
+   - EMS邮政特快（保留底单和签收记录）
+
+3. 【本周内完成】
+   - 整理证据：工资流水、考勤记录、系统权限截图
+   - 记录关键信息：入职日期、工作年限、月平均工资
+   - 计算赔偿金：2N = 2 × 工作年限 × 月平均工资
+   - 准备仲裁材料
+
+4. 【核心法条】
+   - 《劳动合同法》第38条：未提供劳动条件可解除合同
+   - 《劳动合同法》第48条：违法解除可主张2N赔偿金
+   - 停岗待业=违法解除，不是被迫离职N，是2N！
+
+5. 【赔偿金速算】
+   工作年限 × 月平均工资 × 2 = 约XX元
+   （上海2025-2026：三倍封顶37,302元/月）
+
+6. 【管辖仲裁委】
+   - 浦东新区劳动仲裁委：021-58511030
+   - 地址：浦建路1619号
+   - 立案方式：现场/随申办APP
+
+详细指南：读取 docs/company-specific/shanghai-tech-company-anonymous/01-crisis-stop-work-guide.md
+维权速查卡：读取 docs/company-specific/shanghai-tech-company-anonymous/quick-reference/crisis-card.md（建议截图保存到手机）
+```
+
 ## 文件引用清单
 
 | 文件路径 | 内容 | 何时读取 |
@@ -159,6 +204,10 @@ compatibility: universal
 | `docs/evidence.md` | 证据收集、录音取证 | 用户问怎么取证 |
 | `docs/action.md` | 仲裁流程、文书模板 | 用户准备行动 |
 | `docs/hearing.md` | 开庭准备、质证技巧 | 用户已立案待开庭 |
+| `docs/company-specific/shanghai-tech-company-anonymous/README.md` | 某互联网公司维权快速入口 | 用户提及某社交平台公司 |
+| `docs/company-specific/shanghai-tech-company-anonymous/01-crisis-stop-work-guide.md` | 停岗待业应对指南 | 用户被停岗/待岗 |
+| `docs/company-specific/shanghai-tech-company-anonymous/quick-reference/crisis-card.md` | 维权速查卡 | 紧急情况快速参考 |
+| `docs/company-specific/shanghai-tech-company-anonymous/quick-reference/evidence-checklist.md` | 证据收集清单 | 系统性收集证据 |
 | `references/laws.md` | 法律条文汇编 | 需要法律依据 |
 | `references/shanghai.md` | 上海特殊规定、联系方式 | 需要上海具体信息 |
 | `references/compensation.md` | 赔偿计算详解 | 详细解释计算方式 |
