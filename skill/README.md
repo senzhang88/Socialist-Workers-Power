@@ -2,7 +2,23 @@
 
 为上海地区劳动者提供全流程维权指导的 Claude Skill。
 
-**品牌统一：WorkPowers / 劳动者力量**
+**品牌统一：WorkPowers / 劳动者力量** | **当前版本：v1.1（2026-04-26）**
+
+## ✨ v1.1 重要更新
+
+- 🆕 **判例知识库接入**（`references/cases.md`）：50 篇胜诉 + 50 篇败诉模式提炼，按场景索引到 z.dasszss.com 完整版
+- 🆕 **6 大高频场景模板**：欠薪 / 年终奖 / 加班费 / 医疗期 / 三期女职工 / 试用期辞退·未签合同双倍工资
+- 🆕 **法规时效更新**：《劳动争议司法解释（二）》2025-09-01 生效；上海工资支付办法有效至 2026-08-15；上海医疗期延长至 2030-06-30
+- 🆕 **最高法指导案例**：18 号（违纪比例原则）、183 号（末位淘汰违法）
+- 🆕 **上海资源全栈**：12348 / 12351 / 总工会 / 法律援助中心 / 街道司法所 / 信访通道 / 一网通办
+
+## 在线完整版
+
+- 网站：<https://z.dasszss.com/>
+- 法律法规库（5 部核心 + 12 份配套 + 2 个指导案例全文）：<https://z.dasszss.com/references/laws/>
+- 上海维权地图：<https://z.dasszss.com/references/shanghai/wei-quan-map/>
+- 案例库（686 条索引 + 100 篇深度分析）：<https://z.dasszss.com/case-library/>
+- 灯塔计划（≤ 5000 元月收入劳动者免费）：<https://z.dasszss.com/lighthouse/>
 
 ## 触发场景
 
@@ -39,9 +55,11 @@
 │   ├── action.md         # 仲裁流程
 │   └── hearing.md        # 开庭准备
 ├── references/           # 参考资料（按需加载）
-│   ├── shanghai.md       # 上海专属数据
-│   ├── laws.md           # 法律条文汇编
-│   └── compensation.md   # 赔偿计算详解
+│   ├── shanghai.md       # 上海仲裁/工会/法援/司法所/信访/网办
+│   ├── laws.md           # 法律条文汇编（含 2025-09-01 解释二、指导案例 18/183）
+│   ├── compensation.md   # 赔偿计算详解
+│   ├── cases.md          # 上海判例胜负模式提炼（v1.1 新增）
+│   └── official.md       # 官方资源链接
 ├── scripts/              # 可执行脚本 [官方标准]
 │   ├── calculator.py     # 赔偿计算器
 │   └── aggregate_benchmark.py  # 结果聚合

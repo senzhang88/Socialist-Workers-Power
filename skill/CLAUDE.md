@@ -37,7 +37,8 @@
 2. **读取对应指南**
    - 软裁员 → `docs/crisis.md` + `references/shanghai.md`
    - 赔偿计算 → `references/compensation.md` + `scripts/calculator.py`
-   - 法律依据 → `references/laws.md`
+   - 法律依据 → `references/laws.md`（含 2025-09-01 解释二、最高法指导案例 18/183 号）
+   - 判例参考 → `references/cases.md`（v1.1 新增；按场景给出胜负模式 + 链接到 z.dasszss.com）
 
 3. **结构化响应**（必须包含）
    - ✅ **即时行动** - 今天/明天做什么
@@ -61,9 +62,10 @@
 | `docs/evidence.md` | 证据收集 | 用户问怎么取证 |
 | `docs/action.md` | 仲裁流程 | 用户准备行动 |
 | `docs/hearing.md` | 开庭准备 | 用户已立案待开庭 |
-| `references/laws.md` | 法律条文汇编 | 需要法律依据 |
-| `references/shanghai.md` | 上海特殊规定 | 需要上海具体信息 |
+| `references/laws.md` | 法律条文汇编（含 2025-09-01 解释二、指导案例 18/183） | 需要法律依据 |
+| `references/shanghai.md` | 上海仲裁/工会/法援/司法所/信访/网办 | 需要上海具体信息 |
 | `references/compensation.md` | 赔偿计算详解 | 详细解释计算方式 |
+| `references/cases.md` | 上海判例胜负模式（v1.1 新增） | 用户描述场景后做"类案对比" |
 | `scripts/calculator.py` | Python计算器 | 精确计算赔偿 |
 
 ### 绝对禁止
@@ -92,6 +94,7 @@ python scripts/calculator.py
 
 ---
 
-*本技能遵循Anthropic官方skill-creator标准构建*
-*版本：1.0*
-*更新：2025-03*
+*本技能遵循 Anthropic 官方 skill-creator 标准构建*
+*版本：v1.1（接入判例知识库 + 新增 6 大高频场景）*
+*更新：2026-04-26*
+*在线完整版：https://z.dasszss.com/*
