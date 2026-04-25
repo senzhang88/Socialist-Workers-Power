@@ -23,8 +23,35 @@ nav:
   - ⚖️ 开庭阶段:
     - 浦东劳动仲裁开庭指南: phase-4-court/hearing-guide.md
   - 📚 参考资料:
-    - 法律法规: references/laws/laws-compilation.md
-    - 上海规定: references/shanghai/shanghai-regulations.md
+    - 法律法规库:
+      - 总入口: references/laws/index.md
+      - 速查 - 核心法条要点: references/laws/laws-compilation.md
+      - 核心法律全文:
+        - 劳动合同法: references/laws/full-text/01-劳动合同法.md
+        - 劳动争议调解仲裁法: references/laws/full-text/02-劳动争议调解仲裁法.md
+        - 民法典: references/laws/full-text/03-民法典.md
+        - 民事诉讼法: references/laws/full-text/04-民事诉讼法.md
+        - 劳动法: references/laws/full-text/05-劳动法.md
+      - 配套司法解释 / 上海办法:
+        - 劳动争议司法解释（一）: references/laws/supplementary/05-劳动争议司法解释一.md
+        - 劳动争议司法解释（二·2025-09-01 生效）: references/laws/supplementary/12-劳动争议司法解释二.md
+        - 上海企业工资支付办法: references/laws/supplementary/06-上海企业工资支付办法.md
+        - 上海工资支付办法-现行有效说明: references/laws/supplementary/06A-工资支付办法-现行有效.md
+        - 职工带薪年休假条例: references/laws/supplementary/07-职工带薪年休假条例.md
+        - 带薪年休假实施办法: references/laws/supplementary/08-带薪年休假实施办法.md
+        - 民事诉讼证据规定（2002）: references/laws/supplementary/09-民事诉讼证据规定-2002.md
+        - 民事诉讼证据规定（2019 修改）: references/laws/supplementary/09A-民事诉讼证据规定-2019修改.md
+        - 民事诉讼证据规定使用说明: references/laws/supplementary/09B-民事诉讼证据规定-使用说明.md
+        - 信息网络侵害人身权益规定: references/laws/supplementary/10-信息网络侵害人身权益.md
+        - 上海医疗期标准: references/laws/supplementary/11-上海医疗期标准.md
+        - 上海医疗期-延长 2030: references/laws/supplementary/11A-上海医疗期-延长2030.md
+      - 最高法指导案例:
+        - 18 号 - 中兴通讯诉王鹏: references/laws/cases/18号-中兴通讯诉王鹏.md
+        - 183 号 - 房玥诉大都会人寿: references/laws/cases/183号-房玥诉大都会人寿.md
+    - 上海资源:
+      - 上海政策与三倍封顶: references/shanghai/shanghai-regulations.md
+      - 上海社保与公积金: references/shanghai/shanghai-social-insurance.md
+      - 上海维权地图（仲裁委/工会/法援）: references/shanghai/wei-quan-map.md
     - 赔偿计算: references/compensation/compensation-calc.md
     - 官方渠道: resources/official-resources.md
   - 🔦 灯塔计划: lighthouse.md
